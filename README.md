@@ -11,12 +11,12 @@ QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University
 
   実行結果の動画ファイルを下記の表に格納する
 
-|項目|詳細|フォルダ|
-|----|----|----|
-|改善前デモ_ターゲット位置が中心|改善前のソースにおいて、ターゲット位置が10,10から実行した結果(ログと動画)|demo\before_taget_center|
-|改善前デモ_ターゲット位置が中心|改善前のソースにおいて、ターゲット位置が1,1から実行した結果(ログと動画)|demo\before_taget_corner|
-|改善後デモ_ターゲット位置が中心|改善後のソースにおいて、ターゲット位置が10,10から実行した結果(ログと動画)|demo\after_taget_center|
-|改善後デモ_ターゲット位置が中心|改善後のソースにおいて、ターゲット位置が1,1から実行した結果(ログと動画)|demo\after_taget_corner|
+|項目|詳細|フォルダ|ファイル形式|
+|----|----|----|----|
+|改善前デモ_ターゲット位置が中心|改善前のソースにおいて、<br>ターゲット位置が10,10から実行した結果(ログと動画)|demo\before_taget_center|動画：YYYY-MM-DD hh mm ss.mp4<br>ログ：YYYY-MM-DD hh mm ss.txt|
+|改善前デモ_ターゲット位置が中心|改善前のソースにおいて、<br>ターゲット位置が1,1から実行した結果(ログと動画)|demo\before_taget_corner|動画：YYYY-MM-DD hh mm ss.mp4<br>ログ：YYYY-MM-DD hh mm ss.txt|
+|改善後デモ_ターゲット位置が中心|改善後のソースにおいて、<br>ターゲット位置が10,10から実行した結果(ログと動画)|demo\after_taget_center|動画：YYYY-MM-DD hh mm ss.mp4<br>ログ：YYYY-MM-DD hh mm ss.txt|
+|改善後デモ_ターゲット位置が中心|改善後のソースにおいて、<br>ターゲット位置が1,1から実行した結果(ログと動画)|demo\after_taget_corner|動画：YYYY-MM-DD hh mm ss.mp4<br>ログ：YYYY-MM-DD hh mm ss.txt|
 
 
 
