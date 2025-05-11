@@ -26,8 +26,8 @@ QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University
 |ソース名|詳細|ファイル|
 |----|----|----|
 |改善前ソース|改善前のソース|source\quantum_sim_onigokko_before.py|
-|改善後ソース_実行前|改善後のソースで、コサイン類似度を前もって計算する。<br>その結果をgoogleドライブの/content配下に格納。<br>実行時間は1時間ほどかかる。<br>代わりの手段として下記に示す前提ファイルをgoogleドライブのcontentフォルダに格納する。|source\quantum_sim_onigokko_initial.py|
-|改善後ソース_シミュレーション|改善後のソースにおいて、シミュレーションするソース。<br>「改善後ソース_実行前」を動作するか、もしくは、googleドライブのcontentフォルダ直下に前提ファイル（次の項で示す）を置くかしないと実行できない。|source\quantum_sim_onigokko_after.py|
+|改善後ソース_実行前|改善後のソースで、コサイン類似度を前もって計算する。<br>その結果をgoogleドライブの/content配下に格納。<br>実行時間は30分以上はかかる。<br>代わりの手段として下記に示す前提ファイルをgoogleドライブのcontentフォルダに格納する。|source\quantum_sim_onigokko_initial.py|
+|改善後ソース_シミュレーション|改善後のソースにおいて、シミュレーションするソース。<br>10分から40分ほどかかるため注意が必要<br>「改善後ソース_実行前」を動作するか、もしくは、googleドライブのcontentフォルダ直下に前提ファイル（次の項で示す）を置くかしないと実行できない。|source\quantum_sim_onigokko_after.py|
 
 
 
@@ -49,6 +49,8 @@ QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University
 
 2.quantum_sim_onigokko_before.pyを実行
 
+4.ターゲットと各ハンター6体の初期の座標位置をx,yという形式で入力する。例：「10,10」のような形で入力する。xとyは整数の0～19とする。
+
 # 改善後の動作方法(google Colab)
 
 1.!pip install openjij dimod numpy matplotlib numpy を実行する
@@ -60,3 +62,5 @@ QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University
 方法2 prepared_fileフォルダにあるファイルを置く
 
 3.quantum_sim_onigokko_after.pyを実行
+
+4.ターゲットと各ハンター6体の初期の座標位置をx,yという形式で入力する。例：「10,10」のような形で入力する。xとyは整数の0～19とする。
