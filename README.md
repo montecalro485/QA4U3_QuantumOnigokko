@@ -38,6 +38,11 @@ QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University
 |----|----|
 |前提ファイル|prepared_file|
 
+
+-- プレゼンテーションの資料
+
+　　同一フォルダにGroup4430_量子ユニコーン_量子おにごっこ（最終）_v5.pptxとして存在
+
 # 改善前の動作方法(google Colab)
 
 1.!pip install openjij dimod numpy matplotlib numpy を実行する
