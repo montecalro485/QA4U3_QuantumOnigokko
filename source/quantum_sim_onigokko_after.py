@@ -23,13 +23,13 @@ SIMULATION_TIME_LIMIT = 2400 # 制限時間 (必要に応じて調整)
 # --- QUBO パラメータ (v4 - 包囲目的) ---
 # 注意: グリッドサイズ変更に伴い、これらのパラメータの再調整が必要になる可能性が高い
 PARAM_A = 36.0  # 距離1ボーナス係数
-PARAM_A_FAR = 1.7 # 距離2以上ペナルティ係数
-PARAM_B = 1.5 #各ターゲットの原点位置との関係におけるパラメータ
-PARAM_C = 26.0  # 自分自身からの距離
+PARAM_A_FAR = 1.9 # 距離2以上ペナルティ係数
+PARAM_B = 1.1 #各ターゲットの原点位置との関係におけるパラメータ
+PARAM_C = 26.0  # 自分自身からの距離のボーナス係数
 PARAM_P1 = 70.0 # 制約項1(位置一意性)のペナルティ
 PARAM_P2 = 70.0 # 制約項2(衝突回避)のペナルティ
 PARAM_P3 = 70.0 # 制約項3(ターゲットとの衝突回避)のペナルティ
-PARAM_P4 = 1.0 # 制約項4(現ターゲット位置と理想位置の距離の差)のペナルティ
+PARAM_C_FAR = 1.0 # 制約項4(現ターゲット位置と理想位置の距離の差)のペナルティ
 NUM_READS = 3 # サンプリング回数 (20x20ではさらに増やす必要があるかも)
 KEY_SEPARATOR = "@"
 qubo_dictionary={}
@@ -114,7 +114,7 @@ def build_qubo(target_pos, grid_size, num_hunters, A, A_far,B,C, P1, P2, P3, P4,
             else:
                 target_score = A_far * (distance - 1)
             Q[(idx, idx)] += target_score
-    def innerThread2(h,x,y,hunter_pos,C,PARAM_P4,grid_size) :
+    def innerThread2(h,x,y,hunter_pos,C,PARAM_C_FAR,grid_size) :
             idx = get_variable_index(h, x, y, grid_size)
             distance = manhattan_distance([x, y], hunter_pos)
             target_score = 0.0
@@ -123,7 +123,7 @@ def build_qubo(target_pos, grid_size, num_hunters, A, A_far,B,C, P1, P2, P3, P4,
             elif distance == 1:
                 target_score = -C
             else:
-                target_score = PARAM_P4 * (distance - 1)
+                target_score = PARAM_C_FAR * (distance - 1)
             Q[(idx, idx)] += target_score
     """ターゲット位置と係数に基づきQUBO辞書を構築する (包囲目的)"""
     dict = getVariousPositionQubo(target_pos)
@@ -195,7 +195,7 @@ def build_qubo(target_pos, grid_size, num_hunters, A, A_far,B,C, P1, P2, P3, P4,
     for h in range(num_hunters):
         for y in range(grid_size): # ループ範囲が grid_size に依存
             for x in range(grid_size): # ループ範囲が grid_size に依存
-                t = threading.Thread(target=innerThread2, args=(h,x,y,hunter_positions_list[h],C,PARAM_P4,grid_size))
+                t = threading.Thread(target=innerThread2, args=(h,x,y,hunter_positions_list[h],C,PARAM_C_FAR,grid_size))
                 threads.append(t)
                 t.start()
     for t in threads :
