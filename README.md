@@ -1,6 +1,17 @@
 # QuantumOnigokko
 QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University 
 
+# 本プロジェクトの実験の目的
+
+改善前はQAで解くような式になっていなかった。改善後として、QAの特徴を活かせるような式を追加した。そこに効果があるか見てみたい。
+
+ただ、QUBOを解く式が大きいため、GoogleColab上では実現可能な時間で計算は不可能だった。
+
+今回、そのステップ数（解く回数）に効果があるか見てみたい。
+
+※5分という短い動画の中で語れなかったので、ここで記載する。
+
+
 
 # 本プロジェクトの参照方法
 
