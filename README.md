@@ -15,6 +15,8 @@ QuantumOnigokko created by QA4U3 Group4430_QuantumUnicorns at Tohoku University
 
     その際にt検定を用いて、効果があるか検証した。
 
+    ひいては、QAで鬼ごっこのような問題を解くべきかということを検証したい。
+
     ※5分という短い動画の中で語れなかったので、ここで記載する。（同様のことはdemoフォルダのExcelにも記載）
 
 
